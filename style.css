@@ -1,6 +1,6 @@
 body {
-    background: rgb(125, 198, 205);
-    color: rgb(45, 45, 45);
+    background: rgb(255, 83, 83);
+    color: rgb(255, 0, 0);
     font-family: Arial, sans-serif;
 }
 
@@ -10,7 +10,7 @@ body {
 }
 
 nav {
-    background: rgb(239, 80, 41);
+    background: rgb(0, 29, 251);
     margin: 0 auto;
     display: flex;
     padding: 10px;
@@ -24,6 +24,7 @@ h1 {
 }
 
 .nav,li {
+    text-align: center;
     display: inline-block;
     padding: 0 10px;
 }
@@ -61,4 +62,8 @@ main {
 
 h2, h3 {
     margin: 0px;
+}
+
+h1 {
+    font-size: 30px;
 }
