@@ -9,7 +9,9 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/4a/Color_changing_gradient_rainbow.gif);
+			background-repeat: no-repeat;
+			background-position: center;
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -23,6 +25,13 @@
 		.board {
 			height: 100vh;
 		}
+			body {
+				background-image: url(https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 
@@ -66,6 +75,9 @@
 			//////////////////////////////////////////////////////////////////
 
 			// TODO 2 - Variable declarations 
+			var positionX = 0;
+			var points = 0;
+			var speed = 10;
 
 
 
@@ -75,6 +87,16 @@
 			turn it around! 
 			*/
 			function update() {
+				moveBoxTo(positionX);
+				positionX = positionX + speed;
+				if (positionX > boardWidth) {
+					speed = speed * -1;
+				}
+				if (positionX < 0) {
+					speed = speed * -1
+				}
+				
+				
 
 
 			};
@@ -85,6 +107,10 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
+				positionX = 0;
+				points = points + 1;
+				changeBoxText(points);
+				speed = 3 * points + 10;
 
 
 			};
